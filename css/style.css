@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +13,12 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* hero  */
+/* Hero */
 .hero {
   background: radial-gradient(circle at 35% 75%, #6afcff, #7e36f4);
   padding: 30px 0;
@@ -45,8 +47,6 @@ nav a {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
   text-align: center;
   padding: 0 20px;
 }
@@ -84,7 +84,6 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -97,7 +96,6 @@ nav a {
 
 .hero-icons img {
   width: 50%;
-  max-width: 100%;
   height: auto;
 }
 
@@ -144,7 +142,7 @@ nav a {
   opacity: 0.2;
 }
 
-/* brand */
+/* Brand */
 .brand {
   display: block;
   margin: 40px auto;
@@ -152,23 +150,31 @@ nav a {
   max-width: 1160px;
 }
 
-/* features */
-
-.features {
+/* Features */
+.features .container {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 70px 20px;
+  padding: 70px 0;
 }
 
 .feature-card {
   background-color: #fafafb;
   border-radius: 12px;
-  margin-bottom: 50px;
   width: 100%;
   max-width: 354px;
+  text-align: left;
+}
+
+.feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+.feature-card h3,
+.feature-card p {
+  padding: 0 30px;
 }
 
 .feature-card h3 {
@@ -177,34 +183,23 @@ nav a {
   font-weight: 700;
   color: #212121;
   margin-bottom: 10px;
-  padding: 0px 30px;
 }
 
 .feature-card p {
-  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   line-height: 24px;
   color: #666;
-  padding: 0 30px 30px;
-}
-
-.feature-card img {
-  display: block;
-  width: 100%;
-  max-width: 354px;
-  height: auto;
-  margin: 0 auto 30px;
-}
-
-/* global support */
-
-.global-support {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-bottom: 30px;
   font-family: "Open Sans", sans-serif;
-  padding: 0px 14%;
-  gap: 10%;
+}
+
+/* Global Support */
+.global-support .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 0;
 }
 
 .global-support h2 {
@@ -221,16 +216,12 @@ nav a {
   max-width: 500px;
 }
 
-.content {
-  min-width: 300px;
-}
-
 .step {
-  padding: 5px;
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
   gap: 12px;
+  padding: 5px;
+  margin-bottom: 30px;
   transition: all 0.3s ease;
 }
 
@@ -245,6 +236,7 @@ nav a {
   width: 50px;
   height: 50px;
   color: #ffffff;
+  background-color: #1558b9;
   text-align: center;
   display: flex;
   align-items: center;
@@ -254,33 +246,18 @@ nav a {
   font-weight: bold;
 }
 
-.step p {
-  font-weight: 600;
-  padding: 0px 3%;
-}
-.global-support .image {
-  min-width: 300px;
-  text-align: center;
-}
-
-.global-support .image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-/* stats section */
-
-.stats-section {
+/* Stats Section */
+.stats-section .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 19%;
+  gap: 60px;
+  padding: 80px 0;
 }
 
 .stats-content {
   max-width: 500px;
-  min-width: 500px;
+  min-width: 300px;
 }
 
 .stats-content h2 {
@@ -310,17 +287,15 @@ nav a {
   cursor: pointer;
 }
 
-/* blog */
-
-.blog-section {
-  padding: 60px 40px;
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
+/* Blog Section */
+.blog-section .container {
+  text-align: center;
+  padding: 60px 0;
 }
 
 .blog-header .subtitle {
   font-weight: 700;
-  color: rgba(33, 33, 33, 1);
+  color: #212121;
   font-size: 20px;
   line-height: 30px;
 }
@@ -328,23 +303,21 @@ nav a {
 .blog-header .title {
   font-size: 40px;
   font-weight: 700;
-  color: rgba(33, 33, 33, 1);
+  color: #212121;
   margin-bottom: 40px;
   letter-spacing: -0.4px;
 }
 
 .blog-cards {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 24px;
-  justify-content: center;
 }
 
 .blog-card {
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 10px 20px #0000000d;
-  overflow: hidden;
   max-width: 354px;
   padding: 16px;
 }
@@ -359,14 +332,22 @@ nav a {
 .card-content {
   padding: 20px;
   line-height: 24px;
+  text-align: left;
 }
 
 .card-content .date {
   font-size: 14px;
   color: #52647c;
   margin-bottom: 8px;
-
   font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
 }
 
 .card-content .card-title {
@@ -380,37 +361,4 @@ nav a {
   font-size: 14px;
   color: #52647c;
   font-weight: 400;
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
-}
-.date {
-  display: flex;
-  align-items: center;
-  color: #888;
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1440px) {
-  .stats-section {
-    padding: 100px 10%;
-  }
-
-  .stats-content {
-    max-width: 550px;
-    min-width: 550px;
-  }
-
-  .stats-content h2 {
-    font-size: 56px;
-    line-height: 100px;
-    letter-spacing: -0.7px;
-  }
-
-  .stats-content p {
-    font-size: 18px;
-    line-height: 34px;
-  }
 }

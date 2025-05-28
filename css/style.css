@@ -294,6 +294,138 @@ nav a {
   cursor: pointer;
 }
 
+/* coments */
+
+.hr {
+  border-bottom: 0.2px solid rgba(201, 201, 201, 0.555);
+}
+.testimonials {
+  padding: 100px 0;
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.testimonials-wrapper {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.testimonial-text {
+  max-width: 354px;
+  flex: 1;
+  padding: 20px 0;
+}
+
+.testimonial-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+  line-height: 48px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.testimonial-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 24px;
+  flex: 2;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  width: 354px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px 32px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-top img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.card-top .info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card-top .info span {
+  font-size: 12px;
+  color: #888;
+}
+
+.comment {
+  color: #52647c;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 300px;
+  left: 290px;
+}
+.quote-icon img {
+  width: 24px;
+  height: 22px;
+}
+
+.testimonial-dots {
+  position: absolute;
+  width: fit-content;
+  margin: 40px auto 0;
+  text-align: center;
+  left: 57.5%;
+}
+
+@media screen and (min-width: 1439px) and (max-width: 1451px) {
+  .testimonial-dots {
+    left: 60%;
+  }
+}
+
+.testimonial-dots .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.testimonial-dots .dot.active {
+  background: #006eff;
+}
+
 /* Blog Section */
 .blog-section .container {
   text-align: center;
@@ -377,12 +509,14 @@ nav a {
 
 /* chat */
 .cta {
-  background: url("/assets/images/chat-background.png") center/cover no-repeat;
+  background: url(/assets/images/chat-background.png) center / cover no-repeat;
   padding: 60px 80px;
   border-radius: 12px;
   width: 1100px;
   height: 354px;
   margin: 40px auto;
+  margin-bottom: 120px;
+  margin-top: 0;
   color: white;
 }
 
@@ -438,8 +572,7 @@ nav a {
 
 .info-text {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.849);
-
+  color: #ffffffd8;
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -447,4 +580,115 @@ nav a {
 .icon-area img {
   width: 275px;
   height: 276px;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 0 0 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer-top {
+  width: 1320px;
+  max-width: 90%;
+  margin: 72px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 24px;
+  color: #000;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #807e7e;
+}
+
+.footer-subscribe p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 28px;
+  color: #000;
+  font-weight: 400;
+  text-align: end;
+}
+
+.subscribe-form {
+  display: flex;
+  width: 354px;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.subscribe-form input {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 48px;
+  outline: none;
+}
+
+.subscribe-form button {
+  border: none;
+  background-color: #006eff;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  width: 63px;
+}
+
+.footer-bottom {
+  width: 1320px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.border {
+  border-top: 0.2px solid #ccc;
+}
+
+.footer-left img {
+  width: 19px;
+  height: 24px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a img {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
